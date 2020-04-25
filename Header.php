@@ -43,7 +43,7 @@
 <?php wp_head(); ?> 
     </head>
   <body>
-       <header class="container-fluid herobg">
+        <header class="container-fluid herobg"<?php if ( get_field(' headerbackgroundimage ') ) { echo 'style="background: url(' . get_field(' headerbackgroundimage ') . ')"'; } ?>>
            
       <nav class="navbar">
   <div class="container-fluid">
@@ -77,7 +77,7 @@
       
    
         <div class="container "> 
-            <h1> Games Design For the Future</h1>
+            <h1><?php the_field('maintagline'); ?></h1>
         </div>
       
       
